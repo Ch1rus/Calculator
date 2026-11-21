@@ -1,0 +1,91 @@
+.calculator{
+    justify-self: center;
+    height: 450px;
+    width: 300px;
+    border: 2px solid black;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+.display-container{
+    height: 100px;
+    width: 300px;
+    border: 1px solid grey;
+    font-size: large;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #f0f0f0;
+}
+
+.display{
+    width: 300px;
+    height: 50px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+     font-family: 'Share Tech Mono', monospace;
+     font-size: 21px;
+   
+}
+.num-op-container{
+    display: flex;
+    box-sizing: border-box;
+}
+.numbers-and-zero{
+display: flex;
+flex-direction: column;
+
+}
+.numbers{
+    
+    height: 280px;
+    width: 200px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    
+}
+.zero-coma{
+    border: 2px solid black;
+    width: 200px;
+    box-sizing: border-box;
+    height: 65px;
+   display: flex;
+   justify-content: space-around;
+
+   
+}
+.individual-number{
+    height: 91px;
+    width: 62px;
+    font-size: larger;
+}
+.operators{
+border: 2px solid black;
+box-sizing: border-box;
+display: flex;
+flex-wrap: wrap;
+width: 100px;
+}
+.individual-operator{
+     height: 56px;
+    width: 100px;
+    font-size: larger;
+}
+
+.zero, .coma{
+    height: 60px;
+    width: 95px;
+    box-sizing: border-box;
+    font-size: larger;
+}
+#one, #four, #seven{
+    margin-left: 1.5px;
+}
+#one, #two, #three{
+    margin-top: 2px;
+}

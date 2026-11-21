@@ -78,135 +78,267 @@ const eight = document.querySelector("#eight")
 const nine = document.querySelector("#nine")
 const zero = document.querySelector(".zero")
 
+const coma = document.querySelector(".coma")
+
 
 //no actualizas el counter hasta que se clique el igual o alguna otra operación
 one.addEventListener("click", (event) =>{
-    if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0){
-    negativeNumbers = 10*Number(negativeNumbers) + 1
+    
+    if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0 && negativeNumbers != 0){
+    negativeNumbers = negativeNumbers + "1"
+    display.textContent = negativeNumbers
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
+    }
+    if(previousOperation == "-" && displayNumber === 0 && fullNumber == 0){
+    negativeNumbers = negativeNumbers + 1
     display.textContent = negativeNumbers
     return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
     }
 
-    displayNumber = 10*Number(displayNumber) + 1
+    if(displayNumber === 0){
+         displayNumber = displayNumber + 1
+    display.textContent = displayNumber
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
+    }
+    displayNumber = displayNumber + "1"
     display.textContent = displayNumber
     console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
 } )
 two.addEventListener("click", (event) =>{
-        
-    if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0){
-    negativeNumbers = 10*Number(negativeNumbers) + 2
+      
+    if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0 && negativeNumbers != 0){
+    negativeNumbers = negativeNumbers + "2"
+    display.textContent = negativeNumbers
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
+    }
+     if(previousOperation == "-" && displayNumber === 0 && fullNumber == 0){
+    negativeNumbers = negativeNumbers + 2
     display.textContent = negativeNumbers
     return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
     }
 
-    displayNumber = 10*Number(displayNumber) + 2
+    if(displayNumber === 0){
+         displayNumber = displayNumber + 2
+    display.textContent = displayNumber
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
+    }
+
+    displayNumber = displayNumber + "2"
     display.textContent = displayNumber
     console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
 } )
 
 three.addEventListener("click", (event) =>{
-       
-    if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0){
-    negativeNumbers = 10*Number(negativeNumbers) + 3
+    
+    
+   if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0 && negativeNumbers != 0){
+    negativeNumbers = negativeNumbers + "3"
     display.textContent = negativeNumbers
     return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
     }
-
-    displayNumber = 10*Number(displayNumber) + 3
+     if(previousOperation == "-" && displayNumber === 0 && fullNumber == 0){
+    negativeNumbers = negativeNumbers + 3
+    display.textContent = negativeNumbers
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
+    }
+    
+    if(displayNumber === 0){
+         displayNumber = displayNumber + 3
+    display.textContent = displayNumber
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
+    }
+    displayNumber = displayNumber + "3"
     display.textContent = displayNumber
     console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
 } )
 
 four.addEventListener("click", (event) =>{
-       
-    if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0){
-    negativeNumbers = 10*Number(negativeNumbers) + 4
+    
+     
+    if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0 && negativeNumbers != 0){
+    negativeNumbers = negativeNumbers + "4"
     display.textContent = negativeNumbers
     return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
     }
+    if(previousOperation == "-" && displayNumber === 0 && fullNumber == 0){
+    negativeNumbers = negativeNumbers + 4
+    display.textContent = negativeNumbers
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
+    }
+    if(displayNumber === 0){
+         displayNumber = displayNumber + 4
+    display.textContent = displayNumber
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
+    }
 
-    displayNumber = 10*Number(displayNumber) + 4
+    displayNumber = displayNumber + "4"
     display.textContent = displayNumber
    console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
 } )
 
 five.addEventListener("click", (event) =>{
-        
-    if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0){
-    negativeNumbers = 10*Number(negativeNumbers) + 5
+     
+    
+    if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0 && negativeNumbers != 0){
+    negativeNumbers = negativeNumbers + "5"
     display.textContent = negativeNumbers
     return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
     }
+     if(previousOperation == "-" && displayNumber === 0 && fullNumber == 0){
+    negativeNumbers = negativeNumbers + 5
+    display.textContent = negativeNumbers
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
+    }
+    if(displayNumber === 0){
+         displayNumber = displayNumber + 5
+    display.textContent = displayNumber
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
+    }
 
-    displayNumber = 10*Number(displayNumber) + 5
+    displayNumber = displayNumber + "5"
     display.textContent = displayNumber
     console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
 } )
 
 six.addEventListener("click", (event) =>{
     
-    if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0){
-    negativeNumbers = 10*Number(negativeNumbers) + 6
+    
+    if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0 && negativeNumbers != 0){
+    negativeNumbers = negativeNumbers + "6"
     display.textContent = negativeNumbers
     return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
     }
+     if(previousOperation == "-" && displayNumber === 0 && fullNumber == 0){
+    negativeNumbers = negativeNumbers + 6
+    display.textContent = negativeNumbers
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
+    }
+    if(displayNumber === 0){
+         displayNumber = displayNumber + 6
+    display.textContent = displayNumber
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
+    }
 
-    displayNumber = 10*Number(displayNumber) + 6
+    displayNumber = displayNumber + "6"
     display.textContent = displayNumber
     console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
 } )
 
 seven.addEventListener("click", (event) =>{
-       
-    if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0){
-    negativeNumbers = 10*Number(negativeNumbers) + 7
+    
+    
+    if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0 && negativeNumbers != 0){
+    negativeNumbers = negativeNumbers + "7"
     display.textContent = negativeNumbers
     return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
     }
+     if(previousOperation == "-" && displayNumber === 0 && fullNumber == 0){
+    negativeNumbers = negativeNumbers + 7
+    display.textContent = negativeNumbers
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
+    }
+    if(displayNumber === 0){
+         displayNumber = displayNumber + 7
+    display.textContent = displayNumber
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
+    }
 
-    displayNumber = 10*Number(displayNumber) + 7
+    displayNumber = displayNumber + "7"
     display.textContent = displayNumber
     console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
 } )
 
 eight.addEventListener("click", (event) =>{
-        
-    if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0){
-    negativeNumbers = 10*Number(negativeNumbers) + 8
+    
+     
+   if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0 && negativeNumbers != 0){
+    negativeNumbers = negativeNumbers + "8"
     display.textContent = negativeNumbers
     return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
     }
+    if(previousOperation == "-" && displayNumber === 0 && fullNumber == 0){
+    negativeNumbers = negativeNumbers + 8
+    display.textContent = negativeNumbers
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
+    }
+    if(displayNumber === 0){
+         displayNumber = displayNumber + 8
+    display.textContent = displayNumber
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
+    }
 
-    displayNumber = 10*Number(displayNumber) + 8
+    displayNumber = displayNumber + "8"
     display.textContent = displayNumber
     console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
 } )
 
 nine.addEventListener("click", (event) =>{
-        
-    if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0){
-    negativeNumbers = 10*Number(negativeNumbers) + 9
+     
+    
+    if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0 && negativeNumbers != 0){
+    negativeNumbers = negativeNumbers + "9"
     display.textContent = negativeNumbers
     return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
     }
+     if(previousOperation == "-" && displayNumber === 0 && fullNumber == 0){
+    negativeNumbers = negativeNumbers + 9
+    display.textContent = negativeNumbers
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
+    }
+    if(displayNumber === 0){
+         displayNumber = displayNumber + 9
+    display.textContent = displayNumber
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
+    }
 
-    displayNumber = 10*Number(displayNumber) + 9
+    displayNumber = displayNumber + "9"
     display.textContent = displayNumber
     console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
 } )
 
 zero.addEventListener("click", (event) =>{
-        
+     
+    if(previousOperation == "-" && displayNumber === 0 && fullNumber == 0){
+    negativeNumbers = negativeNumbers + 0
+    display.textContent = negativeNumbers
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
+    }
     if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0 && negativeNumbers != 0){
-    negativeNumbers = 10*Number(negativeNumbers) + 0
+    negativeNumbers = negativeNumbers + "0"
     display.textContent = negativeNumbers
     return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
     }
 
-    displayNumber = 10*Number(displayNumber) + 0
+     if(displayNumber === 0){
+         displayNumber = displayNumber + 0
+    display.textContent = displayNumber
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
+    }
+    displayNumber = displayNumber + "0"
     display.textContent = displayNumber
     console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
 } )
+
+coma.addEventListener("click", (event) =>{
+
+    if ((negativeNumbers +".") %1 !=0){
+        return
+    }
+    if((displayNumber +".") % 1 != 0 ){//if there's already coma in displayNumber && negativeNumbers
+        return
+    }
+    
+    if(previousOperation == "-"  && fullNumber == 0){
+    negativeNumbers = negativeNumbers + "."
+    display.textContent = negativeNumbers
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation, "negative", negativeNumbers)
+    }    
+    
+    displayNumber = displayNumber + "."
+    display.textContent = displayNumber
+    console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
+} )
+
 
 
 const btnClear = document.querySelector("#clear")

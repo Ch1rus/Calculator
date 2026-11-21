@@ -35,6 +35,29 @@ const operate = function(pendingOperation,number1,number2){
 }
 
 
+const realAddition = operate(
+                    add,
+                    Number(displayNumber), 
+                    Number(fullNumber)
+    ) 
+
+const realSubtraction = operate(
+                    subtract,
+                    Number(displayNumber), 
+                    Number(fullNumber)
+    ) 
+
+const realMultiplication = operate(
+                    multiply,
+                    Number(displayNumber), 
+                    Number(fullNumber)
+    ) 
+const realDivision = operate(
+                    divide,
+                    Number(displayNumber), 
+                    Number(fullNumber)
+    ) 
+
 
 
 const calculator = document.querySelector(".calculator");
@@ -125,12 +148,18 @@ const btnDivide = document.querySelector("#divide")
 const btnEqual = document.querySelector("#equal")
 
 btnEqual.addEventListener("click", (event) =>{
+    if (fullNumber === 0){
+        previousOperation === 0
+        return display.textContent = displayNumber
+    }
     if(previousOperation == "+"){
     fullNumber = displayNumber + fullNumber
+    previousOperation === 0
     displayNumber = 0
     }
     if(previousOperation == "-"){
         fullNumber = fullNumber - displayNumber
+        previousOperation = 0
         displayNumber = 0
     }
     if(previousOperation == "x"){
@@ -139,6 +168,7 @@ btnEqual.addEventListener("click", (event) =>{
                     Number(displayNumber), 
                     Number(fullNumber)
     ) 
+    previousOperation == 0
      displayNumber = 0
     }
     if(previousOperation == "÷"){
@@ -147,6 +177,7 @@ btnEqual.addEventListener("click", (event) =>{
                     Number(fullNumber), 
                     Number(displayNumber)
     ) 
+    previousOperation === 0
     displayNumber = 0
     }
     display.textContent = fullNumber
@@ -154,28 +185,47 @@ btnEqual.addEventListener("click", (event) =>{
 })
 
 btnAddition.addEventListener("click",(event) =>{
-  display.textContent = 0;
+  
+
+  if (previousOperation == "x"){
+    fullNumber = realMultiplication
+   return display.textContent = fullNumber
+  }
   
   if (Number(fullNumber) == 0){
     display.textContent = fullNumber
     
   }
-  
-  if (fullNumber != 0) {
-    fullNumber = operate(
-    add,
-    Number(displayNumber), 
-    Number(fullNumber)
-  )
+  if (previousOperation == "+"){
     
+     fullNumber = operate(
+                    add,
+                    Number(displayNumber), 
+                    Number(fullNumber)
+    ) 
+    displayNumber = 0
+    previousOperation = "+"
     display.textContent = fullNumber
+     return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
+     
   }
+  
+  //if (fullNumber != 0) {
+   // fullNumber = operate(
+    //add,
+    //Number(displayNumber), 
+    //Number(fullNumber)
+  //)
+    
+   // display.textContent = fullNumber
+ // }
   previousOperation = "+"
   fullNumber = operate(
     add,
     Number(displayNumber), 
     Number(fullNumber)
   )
+  display.textContent = 0
   displayNumber = 0
   console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
   
@@ -183,9 +233,67 @@ btnAddition.addEventListener("click",(event) =>{
 
 btnSubtract.addEventListener("click",(event) =>{
   display.textContent = 0;
+  previousOperation = "-"
+
   if (fullNumber == 0){
     display.textContent = fullNumber
   }
+
+  if (fullNumber == 0 && displayNumber != 0 && previousOperation =="-"){
+
+  }
+ 
+  if (displayNumber != 0 && fullNumber !=0 && previousOperation == "-"){
+     fullNumber = operate(
+    subtract,
+    Number(fullNumber), 
+    Number(displayNumber)
+  )  
+  displayNumber = 0
+  console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
+  previousOperation = "-"
+  return display.textContent = fullNumber
+  }
+   if (previousOperation == "+"){
+    
+     fullNumber = operate(
+                    add,
+                    Number(displayNumber), 
+                    Number(fullNumber)
+    ) 
+    displayNumber = 0
+    previousOperation = "-"
+    display.textContent = fullNumber
+     return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
+     
+  }
+  //cuando pulsas igual, o, signo menos, si previous op ha sido -, el display number se vuelve negativo, si es differente a zero
+
+  
+
+  if (fullNumber == 0 && displayNumber != 0 && previousOperation != 0){
+    display.textContent = displayNumber
+    fullNumber = displayNumber
+    displayNumber = 0
+    display.textContent = 0
+    return console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
+  }
+//   if (displayNumber == 0 && previousOperation != 0){
+//     fullNumber = operate(
+//                     subtract,
+//                     Number(display.textContent), 
+//                     Number(fullNumber)
+//     ) 
+//     display.textContent = Number(fullNumber)
+//     return  console.log("this is display number", displayNumber, "this is full numbersdadad", fullNumber, "Previous operation",previousOperation)
+//   }
+
+  if (displayNumber == 0){
+    console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
+    display.textContent = fullNumber
+    return fullNumber
+  }
+ 
   previousOperation = "-"
   fullNumber = operate(
     subtract,
@@ -199,6 +307,7 @@ btnSubtract.addEventListener("click",(event) =>{
 
 btnMultiply.addEventListener("click",(event) =>{
   display.textContent = 0;
+  previousOperation = "x"
   if (fullNumber == 0){
     display.textContent = fullNumber
    fullNumber = displayNumber
@@ -220,6 +329,7 @@ btnMultiply.addEventListener("click",(event) =>{
 
 btnDivide.addEventListener("click",(event) =>{
   display.textContent = 0;
+  previousOperation = "÷"
   if (fullNumber == 0){
     display.textContent = fullNumber
    fullNumber = displayNumber

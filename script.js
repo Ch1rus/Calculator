@@ -18,6 +18,10 @@ let displayNumber = 0
 let negativeNumbers = 0
 let previousOperation = 0
 
+const tooBig = 21
+
+
+
 const operate = function(pendingOperation,number1,number2){
     if (pendingOperation === add){
        return add(number1,number2)
@@ -83,7 +87,10 @@ const coma = document.querySelector(".coma")
 
 //no actualizas el counter hasta que se clique el igual o alguna otra operación
 one.addEventListener("click", (event) =>{
-    
+    if(displayNumber.length > tooBig || negativeNumbers.length > tooBig){
+    return display.textContent = "Too long"
+   }
+
     if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0 && negativeNumbers != 0){
     negativeNumbers = negativeNumbers + "1"
     display.textContent = negativeNumbers
@@ -105,7 +112,10 @@ one.addEventListener("click", (event) =>{
     console.log("this is display number", displayNumber, "this is full number", fullNumber, "Previous operation",previousOperation)
 } )
 two.addEventListener("click", (event) =>{
-      
+    if(displayNumber.length > tooBig || negativeNumbers.length > tooBig){
+    return display.textContent = "Too long"
+   }
+    
     if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0 && negativeNumbers != 0){
     negativeNumbers = negativeNumbers + "2"
     display.textContent = negativeNumbers
@@ -129,7 +139,9 @@ two.addEventListener("click", (event) =>{
 } )
 
 three.addEventListener("click", (event) =>{
-    
+    if(displayNumber.length > tooBig || negativeNumbers.length > tooBig){
+    return display.textContent = "Too long"
+   }
     
    if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0 && negativeNumbers != 0){
     negativeNumbers = negativeNumbers + "3"
@@ -153,7 +165,9 @@ three.addEventListener("click", (event) =>{
 } )
 
 four.addEventListener("click", (event) =>{
-    
+    if(displayNumber.length > tooBig || negativeNumbers.length > tooBig){
+    return display.textContent = "Too long"
+   }
      
     if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0 && negativeNumbers != 0){
     negativeNumbers = negativeNumbers + "4"
@@ -177,7 +191,9 @@ four.addEventListener("click", (event) =>{
 } )
 
 five.addEventListener("click", (event) =>{
-     
+     if(displayNumber.length > tooBig || negativeNumbers.length > tooBig){
+    return display.textContent = "Too long"
+   }
     
     if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0 && negativeNumbers != 0){
     negativeNumbers = negativeNumbers + "5"
@@ -201,7 +217,9 @@ five.addEventListener("click", (event) =>{
 } )
 
 six.addEventListener("click", (event) =>{
-    
+    if(displayNumber.length > tooBig || negativeNumbers.length > tooBig){
+    return display.textContent = "Too long"
+   }
     
     if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0 && negativeNumbers != 0){
     negativeNumbers = negativeNumbers + "6"
@@ -225,7 +243,9 @@ six.addEventListener("click", (event) =>{
 } )
 
 seven.addEventListener("click", (event) =>{
-    
+    if(displayNumber.length > tooBig || negativeNumbers.length > tooBig){
+    return display.textContent = "Too long"
+   }
     
     if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0 && negativeNumbers != 0){
     negativeNumbers = negativeNumbers + "7"
@@ -249,7 +269,9 @@ seven.addEventListener("click", (event) =>{
 } )
 
 eight.addEventListener("click", (event) =>{
-    
+    if(displayNumber.length > tooBig || negativeNumbers.length > tooBig){
+    return display.textContent = "Too long"
+   }
      
    if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0 && negativeNumbers != 0){
     negativeNumbers = negativeNumbers + "8"
@@ -273,7 +295,9 @@ eight.addEventListener("click", (event) =>{
 } )
 
 nine.addEventListener("click", (event) =>{
-     
+     if(displayNumber.length > tooBig || negativeNumbers.length > tooBig){
+    return display.textContent = "Too long"
+   }
     
     if(previousOperation == "-" && displayNumber == 0 && fullNumber == 0 && negativeNumbers != 0){
     negativeNumbers = negativeNumbers + "9"
@@ -297,7 +321,9 @@ nine.addEventListener("click", (event) =>{
 } )
 
 zero.addEventListener("click", (event) =>{
-     
+    if(displayNumber.length > tooBig || negativeNumbers.length > tooBig){
+    return display.textContent = "Too long"
+   } 
     if(previousOperation == "-" && displayNumber === 0 && fullNumber == 0){
     negativeNumbers = negativeNumbers + 0
     display.textContent = negativeNumbers
@@ -320,6 +346,9 @@ zero.addEventListener("click", (event) =>{
 } )
 
 coma.addEventListener("click", (event) =>{
+    if(displayNumber.length > tooBig || negativeNumbers.length > tooBig){
+    return display.textContent = "Too long"
+   } 
 
     if ((negativeNumbers +".") %1 !=0){
         return
